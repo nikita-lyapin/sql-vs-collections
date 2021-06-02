@@ -11,3 +11,9 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
