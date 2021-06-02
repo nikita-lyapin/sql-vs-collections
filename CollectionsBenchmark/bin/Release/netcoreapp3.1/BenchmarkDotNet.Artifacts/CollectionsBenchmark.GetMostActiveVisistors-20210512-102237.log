@@ -1,0 +1,122 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/225a9d11-6523-44d9-8e10-dd1453d6083f
+// command took 1.31s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/225a9d11-6523-44d9-8e10-dd1453d6083f
+// command took 2.02s and exited with 0
+// ***** Done, took 00:00:03 (3.42 sec)   *****
+// Found 1 benchmarks:
+//   GetMostActiveVisistors.NestedLoop: DefaultJob
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "225a9d11-6523-44d9-8e10-dd1453d6083f.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop" --job "Default" --benchmarkId 0 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/225a9d11-6523-44d9-8e10-dd1453d6083f/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 284120.00 ns, 284.1200 us/op
+WorkloadJitting  1: 1 op, 336271791.00 ns, 336.2718 ms/op
+
+WorkloadWarmup   1: 1 op, 340012178.00 ns, 340.0122 ms/op
+WorkloadWarmup   2: 1 op, 342513885.00 ns, 342.5139 ms/op
+WorkloadWarmup   3: 1 op, 340518853.00 ns, 340.5189 ms/op
+WorkloadWarmup   4: 1 op, 336596666.00 ns, 336.5967 ms/op
+WorkloadWarmup   5: 1 op, 336635675.00 ns, 336.6357 ms/op
+WorkloadWarmup   6: 1 op, 329593504.00 ns, 329.5935 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 342061096.00 ns, 342.0611 ms/op
+WorkloadActual   2: 1 op, 337470649.00 ns, 337.4706 ms/op
+WorkloadActual   3: 1 op, 333610999.00 ns, 333.6110 ms/op
+WorkloadActual   4: 1 op, 340361061.00 ns, 340.3611 ms/op
+WorkloadActual   5: 1 op, 338231094.00 ns, 338.2311 ms/op
+WorkloadActual   6: 1 op, 338162254.00 ns, 338.1623 ms/op
+WorkloadActual   7: 1 op, 339199961.00 ns, 339.2000 ms/op
+WorkloadActual   8: 1 op, 346252265.00 ns, 346.2523 ms/op
+WorkloadActual   9: 1 op, 334070086.00 ns, 334.0701 ms/op
+WorkloadActual  10: 1 op, 338598129.00 ns, 338.5981 ms/op
+WorkloadActual  11: 1 op, 337604787.00 ns, 337.6048 ms/op
+WorkloadActual  12: 1 op, 342941326.00 ns, 342.9413 ms/op
+WorkloadActual  13: 1 op, 339204121.00 ns, 339.2041 ms/op
+WorkloadActual  14: 1 op, 344636807.00 ns, 344.6368 ms/op
+WorkloadActual  15: 1 op, 342785176.00 ns, 342.7852 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 342061096.00 ns, 342.0611 ms/op
+WorkloadResult   2: 1 op, 337470649.00 ns, 337.4706 ms/op
+WorkloadResult   3: 1 op, 333610999.00 ns, 333.6110 ms/op
+WorkloadResult   4: 1 op, 340361061.00 ns, 340.3611 ms/op
+WorkloadResult   5: 1 op, 338231094.00 ns, 338.2311 ms/op
+WorkloadResult   6: 1 op, 338162254.00 ns, 338.1623 ms/op
+WorkloadResult   7: 1 op, 339199961.00 ns, 339.2000 ms/op
+WorkloadResult   8: 1 op, 346252265.00 ns, 346.2523 ms/op
+WorkloadResult   9: 1 op, 334070086.00 ns, 334.0701 ms/op
+WorkloadResult  10: 1 op, 338598129.00 ns, 338.5981 ms/op
+WorkloadResult  11: 1 op, 337604787.00 ns, 337.6048 ms/op
+WorkloadResult  12: 1 op, 342941326.00 ns, 342.9413 ms/op
+WorkloadResult  13: 1 op, 339204121.00 ns, 339.2041 ms/op
+WorkloadResult  14: 1 op, 344636807.00 ns, 344.6368 ms/op
+WorkloadResult  15: 1 op, 342785176.00 ns, 342.7852 ms/op
+
+// AfterAll
+// Benchmark Process 26739 has exited with code 0
+
+Mean = 339.679 ms, StdErr = 0.920 ms (0.27%), N = 15, StdDev = 3.563 ms
+Min = 333.611 ms, Q1 = 337.884 ms, Median = 339.200 ms, Q3 = 342.423 ms, Max = 346.252 ms
+IQR = 4.540 ms, LowerFence = 331.074 ms, UpperFence = 349.233 ms
+ConfidenceInterval = [335.871 ms; 343.488 ms] (CI 99.9%), Margin = 3.809 ms (1.12% of Mean)
+Skewness = 0.08, Kurtosis = 2.11, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report.csv
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report-github.md
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report.html
+
+// * Detailed results *
+GetMostActiveVisistors.NestedLoop: DefaultJob
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 339.679 ms, StdErr = 0.920 ms (0.27%), N = 15, StdDev = 3.563 ms
+Min = 333.611 ms, Q1 = 337.884 ms, Median = 339.200 ms, Q3 = 342.423 ms, Max = 346.252 ms
+IQR = 4.540 ms, LowerFence = 331.074 ms, UpperFence = 349.233 ms
+ConfidenceInterval = [335.871 ms; 343.488 ms] (CI 99.9%), Margin = 3.809 ms (1.12% of Mean)
+Skewness = 0.08, Kurtosis = 2.11, MValue = 2
+-------------------- Histogram --------------------
+[331.715 ms ; 348.148 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.1, OS=ubuntu 20.04
+Intel Core i5-6500 CPU 3.20GHz (Skylake), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=3.1.403
+  [Host]     : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+
+
+|     Method |     Mean |   Error |  StdDev |
+|----------- |---------:|--------:|--------:|
+| NestedLoop | 339.7 ms | 3.81 ms | 3.56 ms |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:07 (7.92 sec), executed benchmarks: 1
+
+Global total time: 00:00:11 (11.35 sec), executed benchmarks: 1
+// * Artifacts cleanup *

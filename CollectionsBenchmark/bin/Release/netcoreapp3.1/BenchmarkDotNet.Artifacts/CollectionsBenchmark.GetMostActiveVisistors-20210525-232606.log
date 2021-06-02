@@ -1,0 +1,577 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 7 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497
+// command took 1.47s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497
+// command took 2.32s and exited with 0
+// ***** Done, took 00:00:03 (3.91 sec)   *****
+// Found 7 benchmarks:
+//   GetMostActiveVisistors.NestedLoop: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.NestedLoop_Linked: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.MergeJoin: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.NestedLoop1: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.NestedLoop1_LinkedList: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.NestedLoop2: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+//   GetMostActiveVisistors.DataLoad: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 0 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-YWGWQV(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 339607.00 ns, 339.6070 us/op
+WorkloadJitting  1: 1 op, 5832234.00 ns, 5.8322 ms/op
+
+OverheadJitting  2: 16 op, 542460.00 ns, 33.9038 us/op
+WorkloadJitting  2: 16 op, 20907316.00 ns, 1.3067 ms/op
+
+WorkloadPilot    1: 16 op, 20356180.00 ns, 1.2723 ms/op
+WorkloadPilot    2: 32 op, 39683631.00 ns, 1.2401 ms/op
+WorkloadPilot    3: 64 op, 77889492.00 ns, 1.2170 ms/op
+WorkloadPilot    4: 128 op, 158487056.00 ns, 1.2382 ms/op
+WorkloadPilot    5: 256 op, 236023887.00 ns, 921.9683 us/op
+WorkloadPilot    6: 512 op, 422298984.00 ns, 824.8027 us/op
+WorkloadPilot    7: 1024 op, 853170742.00 ns, 833.1746 us/op
+
+OverheadWarmup   1: 1024 op, 7197.00 ns, 7.0283 ns/op
+OverheadWarmup   2: 1024 op, 2122.00 ns, 2.0723 ns/op
+OverheadWarmup   3: 1024 op, 2354.00 ns, 2.2988 ns/op
+OverheadWarmup   4: 1024 op, 2748.00 ns, 2.6836 ns/op
+OverheadWarmup   5: 1024 op, 2825.00 ns, 2.7588 ns/op
+OverheadWarmup   6: 1024 op, 2642.00 ns, 2.5801 ns/op
+OverheadWarmup   7: 1024 op, 2638.00 ns, 2.5762 ns/op
+OverheadWarmup   8: 1024 op, 2578.00 ns, 2.5176 ns/op
+OverheadWarmup   9: 1024 op, 2621.00 ns, 2.5596 ns/op
+OverheadWarmup  10: 1024 op, 2551.00 ns, 2.4912 ns/op
+
+OverheadActual   1: 1024 op, 2569.00 ns, 2.5088 ns/op
+OverheadActual   2: 1024 op, 2884.00 ns, 2.8164 ns/op
+OverheadActual   3: 1024 op, 2775.00 ns, 2.7100 ns/op
+OverheadActual   4: 1024 op, 2692.00 ns, 2.6289 ns/op
+OverheadActual   5: 1024 op, 2768.00 ns, 2.7031 ns/op
+OverheadActual   6: 1024 op, 2800.00 ns, 2.7344 ns/op
+OverheadActual   7: 1024 op, 2747.00 ns, 2.6826 ns/op
+OverheadActual   8: 1024 op, 2645.00 ns, 2.5830 ns/op
+OverheadActual   9: 1024 op, 2789.00 ns, 2.7236 ns/op
+OverheadActual  10: 1024 op, 2783.00 ns, 2.7178 ns/op
+OverheadActual  11: 1024 op, 2763.00 ns, 2.6982 ns/op
+OverheadActual  12: 1024 op, 2690.00 ns, 2.6270 ns/op
+OverheadActual  13: 1024 op, 2711.00 ns, 2.6475 ns/op
+OverheadActual  14: 1024 op, 2849.00 ns, 2.7822 ns/op
+OverheadActual  15: 1024 op, 2721.00 ns, 2.6572 ns/op
+
+WorkloadWarmup   1: 1024 op, 863718233.00 ns, 843.4748 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1024 op, 847441867.00 ns, 827.5799 us/op
+WorkloadActual   2: 1024 op, 846758601.00 ns, 826.9127 us/op
+WorkloadActual   3: 1024 op, 840396273.00 ns, 820.6995 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1024 op, 847439104.00 ns, 827.5773 us/op
+WorkloadResult   2: 1024 op, 846755838.00 ns, 826.9100 us/op
+WorkloadResult   3: 1024 op, 840393510.00 ns, 820.6968 us/op
+
+// AfterAll
+// Benchmark Process 121410 has exited with code 0
+
+Mean = 825.061 μs, StdErr = 2.191 μs (0.27%), N = 3, StdDev = 3.795 μs
+Min = 820.697 μs, Q1 = 823.803 μs, Median = 826.910 μs, Q3 = 827.244 μs, Max = 827.577 μs
+IQR = 3.440 μs, LowerFence = 818.643 μs, UpperFence = 832.404 μs
+ConfidenceInterval = [755.835 μs; 894.287 μs] (CI 99.9%), Margin = 69.226 μs (8.39% of Mean)
+Skewness = -0.37, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop_Linked: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop_Linked" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 1 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-FACHTO(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 278005.00 ns, 278.0050 us/op
+WorkloadJitting  1: 1 op, 6241792.00 ns, 6.2418 ms/op
+
+OverheadJitting  2: 16 op, 316059.00 ns, 19.7537 us/op
+WorkloadJitting  2: 16 op, 22070506.00 ns, 1.3794 ms/op
+
+WorkloadPilot    1: 16 op, 21836438.00 ns, 1.3648 ms/op
+WorkloadPilot    2: 32 op, 40259403.00 ns, 1.2581 ms/op
+WorkloadPilot    3: 64 op, 82152553.00 ns, 1.2836 ms/op
+WorkloadPilot    4: 128 op, 174475771.00 ns, 1.3631 ms/op
+WorkloadPilot    5: 256 op, 240258436.00 ns, 938.5095 us/op
+WorkloadPilot    6: 512 op, 475878014.00 ns, 929.4492 us/op
+WorkloadPilot    7: 1024 op, 970027562.00 ns, 947.2925 us/op
+
+OverheadWarmup   1: 1024 op, 6839.00 ns, 6.6787 ns/op
+OverheadWarmup   2: 1024 op, 2247.00 ns, 2.1943 ns/op
+OverheadWarmup   3: 1024 op, 2562.00 ns, 2.5020 ns/op
+OverheadWarmup   4: 1024 op, 2444.00 ns, 2.3867 ns/op
+OverheadWarmup   5: 1024 op, 2636.00 ns, 2.5742 ns/op
+OverheadWarmup   6: 1024 op, 2391.00 ns, 2.3350 ns/op
+
+OverheadActual   1: 1024 op, 2709.00 ns, 2.6455 ns/op
+OverheadActual   2: 1024 op, 2802.00 ns, 2.7363 ns/op
+OverheadActual   3: 1024 op, 2550.00 ns, 2.4902 ns/op
+OverheadActual   4: 1024 op, 2628.00 ns, 2.5664 ns/op
+OverheadActual   5: 1024 op, 2963.00 ns, 2.8936 ns/op
+OverheadActual   6: 1024 op, 2732.00 ns, 2.6680 ns/op
+OverheadActual   7: 1024 op, 2676.00 ns, 2.6133 ns/op
+OverheadActual   8: 1024 op, 2701.00 ns, 2.6377 ns/op
+OverheadActual   9: 1024 op, 2901.00 ns, 2.8330 ns/op
+OverheadActual  10: 1024 op, 2633.00 ns, 2.5713 ns/op
+OverheadActual  11: 1024 op, 2635.00 ns, 2.5732 ns/op
+OverheadActual  12: 1024 op, 2734.00 ns, 2.6699 ns/op
+OverheadActual  13: 1024 op, 2534.00 ns, 2.4746 ns/op
+OverheadActual  14: 1024 op, 2682.00 ns, 2.6191 ns/op
+OverheadActual  15: 1024 op, 2925.00 ns, 2.8564 ns/op
+OverheadActual  16: 1024 op, 3025.00 ns, 2.9541 ns/op
+OverheadActual  17: 1024 op, 2580.00 ns, 2.5195 ns/op
+OverheadActual  18: 1024 op, 2935.00 ns, 2.8662 ns/op
+OverheadActual  19: 1024 op, 2603.00 ns, 2.5420 ns/op
+
+WorkloadWarmup   1: 1024 op, 989275235.00 ns, 966.0891 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1024 op, 971180720.00 ns, 948.4187 us/op
+WorkloadActual   2: 1024 op, 974162001.00 ns, 951.3301 us/op
+WorkloadActual   3: 1024 op, 949749491.00 ns, 927.4897 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1024 op, 971178019.00 ns, 948.4160 us/op
+WorkloadResult   2: 1024 op, 974159300.00 ns, 951.3274 us/op
+WorkloadResult   3: 1024 op, 949746790.00 ns, 927.4871 us/op
+
+// AfterAll
+// Benchmark Process 121429 has exited with code 0
+
+Mean = 942.410 μs, StdErr = 7.509 μs (0.80%), N = 3, StdDev = 13.006 μs
+Min = 927.487 μs, Q1 = 937.952 μs, Median = 948.416 μs, Q3 = 949.872 μs, Max = 951.327 μs
+IQR = 11.920 μs, LowerFence = 920.071 μs, UpperFence = 967.752 μs
+ConfidenceInterval = [705.141 μs; 1,179.679 μs] (CI 99.9%), Margin = 237.269 μs (25.18% of Mean)
+Skewness = -0.36, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: GetMostActiveVisistors.MergeJoin: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.MergeJoin" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 2 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-LMNXML(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 291498.00 ns, 291.4980 us/op
+WorkloadJitting  1: 1 op, 4635884.00 ns, 4.6359 ms/op
+
+OverheadJitting  2: 16 op, 390091.00 ns, 24.3807 us/op
+WorkloadJitting  2: 16 op, 43120012.00 ns, 2.6950 ms/op
+
+WorkloadPilot    1: 16 op, 43109509.00 ns, 2.6943 ms/op
+WorkloadPilot    2: 32 op, 85310782.00 ns, 2.6660 ms/op
+WorkloadPilot    3: 64 op, 158427094.00 ns, 2.4754 ms/op
+WorkloadPilot    4: 128 op, 297335936.00 ns, 2.3229 ms/op
+WorkloadPilot    5: 256 op, 585870472.00 ns, 2.2886 ms/op
+
+OverheadWarmup   1: 256 op, 19222.00 ns, 75.0859 ns/op
+OverheadWarmup   2: 256 op, 881.00 ns, 3.4414 ns/op
+OverheadWarmup   3: 256 op, 850.00 ns, 3.3203 ns/op
+OverheadWarmup   4: 256 op, 779.00 ns, 3.0430 ns/op
+OverheadWarmup   5: 256 op, 841.00 ns, 3.2852 ns/op
+OverheadWarmup   6: 256 op, 1029.00 ns, 4.0195 ns/op
+OverheadWarmup   7: 256 op, 1024.00 ns, 4.0000 ns/op
+OverheadWarmup   8: 256 op, 795.00 ns, 3.1055 ns/op
+OverheadWarmup   9: 256 op, 1054.00 ns, 4.1172 ns/op
+OverheadWarmup  10: 256 op, 739.00 ns, 2.8867 ns/op
+
+OverheadActual   1: 256 op, 1168.00 ns, 4.5625 ns/op
+OverheadActual   2: 256 op, 1107.00 ns, 4.3242 ns/op
+OverheadActual   3: 256 op, 1003.00 ns, 3.9180 ns/op
+OverheadActual   4: 256 op, 1167.00 ns, 4.5586 ns/op
+OverheadActual   5: 256 op, 1343.00 ns, 5.2461 ns/op
+OverheadActual   6: 256 op, 1226.00 ns, 4.7891 ns/op
+OverheadActual   7: 256 op, 999.00 ns, 3.9023 ns/op
+OverheadActual   8: 256 op, 1036.00 ns, 4.0469 ns/op
+OverheadActual   9: 256 op, 1201.00 ns, 4.6914 ns/op
+OverheadActual  10: 256 op, 1149.00 ns, 4.4883 ns/op
+OverheadActual  11: 256 op, 1137.00 ns, 4.4414 ns/op
+OverheadActual  12: 256 op, 1128.00 ns, 4.4062 ns/op
+OverheadActual  13: 256 op, 897.00 ns, 3.5039 ns/op
+OverheadActual  14: 256 op, 1183.00 ns, 4.6211 ns/op
+OverheadActual  15: 256 op, 1097.00 ns, 4.2852 ns/op
+OverheadActual  16: 256 op, 1244.00 ns, 4.8594 ns/op
+OverheadActual  17: 256 op, 987.00 ns, 3.8555 ns/op
+OverheadActual  18: 256 op, 866.00 ns, 3.3828 ns/op
+OverheadActual  19: 256 op, 1096.00 ns, 4.2812 ns/op
+OverheadActual  20: 256 op, 1166.00 ns, 4.5547 ns/op
+
+WorkloadWarmup   1: 256 op, 597395544.00 ns, 2.3336 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 574685063.00 ns, 2.2449 ms/op
+WorkloadActual   2: 256 op, 596215632.00 ns, 2.3290 ms/op
+WorkloadActual   3: 256 op, 601032666.00 ns, 2.3478 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 574683930.50 ns, 2.2449 ms/op
+WorkloadResult   2: 256 op, 596214499.50 ns, 2.3290 ms/op
+WorkloadResult   3: 256 op, 601031533.50 ns, 2.3478 ms/op
+
+// AfterAll
+// Benchmark Process 121449 has exited with code 0
+
+Mean = 2.307 ms, StdErr = 0.032 ms (1.37%), N = 3, StdDev = 0.055 ms
+Min = 2.245 ms, Q1 = 2.287 ms, Median = 2.329 ms, Q3 = 2.338 ms, Max = 2.348 ms
+IQR = 0.051 ms, LowerFence = 2.210 ms, UpperFence = 2.416 ms
+ConfidenceInterval = [1.307 ms; 3.307 ms] (CI 99.9%), Margin = 1.000 ms (43.33% of Mean)
+Skewness = -0.33, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop1: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop1" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 3 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-HPBCTD(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 297170.00 ns, 297.1700 us/op
+WorkloadJitting  1: 1 op, 11519593.00 ns, 11.5196 ms/op
+
+OverheadJitting  2: 16 op, 301539.00 ns, 18.8462 us/op
+WorkloadJitting  2: 16 op, 153012417.00 ns, 9.5633 ms/op
+
+WorkloadPilot    1: 16 op, 151676861.00 ns, 9.4798 ms/op
+WorkloadPilot    2: 32 op, 311772673.00 ns, 9.7429 ms/op
+WorkloadPilot    3: 64 op, 597840120.00 ns, 9.3413 ms/op
+
+OverheadWarmup   1: 64 op, 4336.00 ns, 67.7500 ns/op
+OverheadWarmup   2: 64 op, 696.00 ns, 10.8750 ns/op
+OverheadWarmup   3: 64 op, 832.00 ns, 13.0000 ns/op
+OverheadWarmup   4: 64 op, 561.00 ns, 8.7656 ns/op
+OverheadWarmup   5: 64 op, 518.00 ns, 8.0938 ns/op
+OverheadWarmup   6: 64 op, 560.00 ns, 8.7500 ns/op
+OverheadWarmup   7: 64 op, 625.00 ns, 9.7656 ns/op
+OverheadWarmup   8: 64 op, 683.00 ns, 10.6719 ns/op
+OverheadWarmup   9: 64 op, 783.00 ns, 12.2344 ns/op
+OverheadWarmup  10: 64 op, 661.00 ns, 10.3281 ns/op
+
+OverheadActual   1: 64 op, 668.00 ns, 10.4375 ns/op
+OverheadActual   2: 64 op, 851.00 ns, 13.2969 ns/op
+OverheadActual   3: 64 op, 750.00 ns, 11.7188 ns/op
+OverheadActual   4: 64 op, 731.00 ns, 11.4219 ns/op
+OverheadActual   5: 64 op, 763.00 ns, 11.9219 ns/op
+OverheadActual   6: 64 op, 737.00 ns, 11.5156 ns/op
+OverheadActual   7: 64 op, 763.00 ns, 11.9219 ns/op
+OverheadActual   8: 64 op, 1611.00 ns, 25.1719 ns/op
+OverheadActual   9: 64 op, 1182.00 ns, 18.4688 ns/op
+OverheadActual  10: 64 op, 845.00 ns, 13.2031 ns/op
+OverheadActual  11: 64 op, 902.00 ns, 14.0938 ns/op
+OverheadActual  12: 64 op, 813.00 ns, 12.7031 ns/op
+OverheadActual  13: 64 op, 784.00 ns, 12.2500 ns/op
+OverheadActual  14: 64 op, 875.00 ns, 13.6719 ns/op
+OverheadActual  15: 64 op, 847.00 ns, 13.2344 ns/op
+OverheadActual  16: 64 op, 968.00 ns, 15.1250 ns/op
+OverheadActual  17: 64 op, 688.00 ns, 10.7500 ns/op
+OverheadActual  18: 64 op, 766.00 ns, 11.9688 ns/op
+OverheadActual  19: 64 op, 760.00 ns, 11.8750 ns/op
+OverheadActual  20: 64 op, 688.00 ns, 10.7500 ns/op
+
+WorkloadWarmup   1: 64 op, 607206365.00 ns, 9.4876 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 609704243.00 ns, 9.5266 ms/op
+WorkloadActual   2: 64 op, 598183213.00 ns, 9.3466 ms/op
+WorkloadActual   3: 64 op, 626503842.00 ns, 9.7891 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 609703468.00 ns, 9.5266 ms/op
+WorkloadResult   2: 64 op, 598182438.00 ns, 9.3466 ms/op
+WorkloadResult   3: 64 op, 626503067.00 ns, 9.7891 ms/op
+
+// AfterAll
+// Benchmark Process 121469 has exited with code 0
+
+Mean = 9.554 ms, StdErr = 0.128 ms (1.34%), N = 3, StdDev = 0.223 ms
+Min = 9.347 ms, Q1 = 9.437 ms, Median = 9.527 ms, Q3 = 9.658 ms, Max = 9.789 ms
+IQR = 0.221 ms, LowerFence = 9.105 ms, UpperFence = 9.990 ms
+ConfidenceInterval = [5.494 ms; 13.614 ms] (CI 99.9%), Margin = 4.060 ms (42.49% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop1_LinkedList: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop1_LinkedList" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 4 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-UEHVVI(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> Npgsql.NpgsqlException (0x80004005): Unknown message code: 0
+   at Npgsql.Util.PGUtil.ValidateBackendMessageCode(BackendMessageCode code)
+   at Npgsql.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|200_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.<ReadMessage>g__ReadMessageSequential|45_0(NpgsqlConnector connector, Boolean async)
+   at Npgsql.NpgsqlDataReader.Read(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.Read()
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1100
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 725
+   at CollectionsBenchmark.GetMostActiveVisistors.GlobalSetup() in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/Program.cs:line 60
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_4.Run(IHost host, String benchmarkName) in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/f00e6ff5-9f3d-40b6-80c3-ffe92186f497.notcs:line 3107
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/f00e6ff5-9f3d-40b6-80c3-ffe92186f497.notcs:line 55
+// AfterAll
+ExitCode != 0
+// Benchmark Process 121488 has exited with code 255
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// **************************
+// Benchmark: GetMostActiveVisistors.NestedLoop2: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.NestedLoop2" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 5 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-KRUTLX(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 265353.00 ns, 265.3530 us/op
+WorkloadJitting  1: 1 op, 121290701.00 ns, 121.2907 ms/op
+
+WorkloadPilot    1: 2 op, 161683807.00 ns, 80.8419 ms/op
+WorkloadPilot    2: 3 op, 265371393.00 ns, 88.4571 ms/op
+WorkloadPilot    3: 4 op, 351016446.00 ns, 87.7541 ms/op
+WorkloadPilot    4: 5 op, 422274647.00 ns, 84.4549 ms/op
+WorkloadPilot    5: 6 op, 496062330.00 ns, 82.6771 ms/op
+WorkloadPilot    6: 7 op, 581635799.00 ns, 83.0908 ms/op
+
+WorkloadWarmup   1: 7 op, 583639973.00 ns, 83.3771 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 545151103.00 ns, 77.8787 ms/op
+WorkloadActual   2: 7 op, 528274054.00 ns, 75.4677 ms/op
+WorkloadActual   3: 7 op, 526987255.00 ns, 75.2839 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 545151103.00 ns, 77.8787 ms/op
+WorkloadResult   2: 7 op, 528274054.00 ns, 75.4677 ms/op
+WorkloadResult   3: 7 op, 526987255.00 ns, 75.2839 ms/op
+
+// AfterAll
+// Benchmark Process 121500 has exited with code 0
+
+Mean = 76.210 ms, StdErr = 0.836 ms (1.10%), N = 3, StdDev = 1.448 ms
+Min = 75.284 ms, Q1 = 75.376 ms, Median = 75.468 ms, Q3 = 76.673 ms, Max = 77.879 ms
+IQR = 1.297 ms, LowerFence = 73.430 ms, UpperFence = 78.619 ms
+ConfidenceInterval = [49.794 ms; 102.627 ms] (CI 99.9%), Margin = 26.417 ms (34.66% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: GetMostActiveVisistors.DataLoad: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "f00e6ff5-9f3d-40b6-80c3-ffe92186f497.dll" --benchmarkName "CollectionsBenchmark.GetMostActiveVisistors.DataLoad" --job "IterationCount=3, LaunchCount=1, WarmupCount=1" --benchmarkId 6 in /home/nikita/RiderProjects/CollectionsBenchmark/CollectionsBenchmark/bin/Release/netcoreapp3.1/f00e6ff5-9f3d-40b6-80c3-ffe92186f497/bin/Release/netcoreapp3.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-YNCPBU(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 242120.00 ns, 242.1200 us/op
+WorkloadJitting  1: 1 op, 47101272.00 ns, 47.1013 ms/op
+
+WorkloadPilot    1: 2 op, 90091635.00 ns, 45.0458 ms/op
+WorkloadPilot    2: 3 op, 151717130.00 ns, 50.5724 ms/op
+WorkloadPilot    3: 4 op, 150484730.00 ns, 37.6212 ms/op
+WorkloadPilot    4: 5 op, 72274846.00 ns, 14.4550 ms/op
+WorkloadPilot    5: 6 op, 77477264.00 ns, 12.9129 ms/op
+WorkloadPilot    6: 7 op, 98475041.00 ns, 14.0679 ms/op
+WorkloadPilot    7: 8 op, 100114123.00 ns, 12.5143 ms/op
+WorkloadPilot    8: 9 op, 109276084.00 ns, 12.1418 ms/op
+WorkloadPilot    9: 10 op, 124384174.00 ns, 12.4384 ms/op
+WorkloadPilot   10: 11 op, 134932869.00 ns, 12.2666 ms/op
+WorkloadPilot   11: 12 op, 193343878.00 ns, 16.1120 ms/op
+WorkloadPilot   12: 13 op, 170994038.00 ns, 13.1534 ms/op
+WorkloadPilot   13: 14 op, 178594526.00 ns, 12.7568 ms/op
+WorkloadPilot   14: 15 op, 189079942.00 ns, 12.6053 ms/op
+WorkloadPilot   15: 16 op, 206016467.00 ns, 12.8760 ms/op
+WorkloadPilot   16: 32 op, 436444068.00 ns, 13.6389 ms/op
+WorkloadPilot   17: 64 op, 847056819.00 ns, 13.2353 ms/op
+
+WorkloadWarmup   1: 64 op, 827239567.00 ns, 12.9256 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 820584960.00 ns, 12.8216 ms/op
+WorkloadActual   2: 64 op, 852079094.00 ns, 13.3137 ms/op
+WorkloadActual   3: 64 op, 834681350.00 ns, 13.0419 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 820584960.00 ns, 12.8216 ms/op
+WorkloadResult   2: 64 op, 852079094.00 ns, 13.3137 ms/op
+WorkloadResult   3: 64 op, 834681350.00 ns, 13.0419 ms/op
+
+// AfterAll
+// Benchmark Process 121515 has exited with code 0
+
+Mean = 13.059 ms, StdErr = 0.142 ms (1.09%), N = 3, StdDev = 0.246 ms
+Min = 12.822 ms, Q1 = 12.932 ms, Median = 13.042 ms, Q3 = 13.178 ms, Max = 13.314 ms
+IQR = 0.246 ms, LowerFence = 12.563 ms, UpperFence = 13.547 ms
+ConfidenceInterval = [8.562 ms; 17.556 ms] (CI 99.9%), Margin = 4.497 ms (34.44% of Mean)
+Skewness = 0.07, Kurtosis = 0.67, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report.csv
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report-github.md
+  BenchmarkDotNet.Artifacts/results/CollectionsBenchmark.GetMostActiveVisistors-report.html
+
+// * Detailed results *
+GetMostActiveVisistors.NestedLoop: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 825.061 μs, StdErr = 2.191 μs (0.27%), N = 3, StdDev = 3.795 μs
+Min = 820.697 μs, Q1 = 823.803 μs, Median = 826.910 μs, Q3 = 827.244 μs, Max = 827.577 μs
+IQR = 3.440 μs, LowerFence = 818.643 μs, UpperFence = 832.404 μs
+ConfidenceInterval = [755.835 μs; 894.287 μs] (CI 99.9%), Margin = 69.226 μs (8.39% of Mean)
+Skewness = -0.37, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[820.684 μs ; 827.590 μs) | @@@
+---------------------------------------------------
+
+GetMostActiveVisistors.NestedLoop_Linked: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 942.410 μs, StdErr = 7.509 μs (0.80%), N = 3, StdDev = 13.006 μs
+Min = 927.487 μs, Q1 = 937.952 μs, Median = 948.416 μs, Q3 = 949.872 μs, Max = 951.327 μs
+IQR = 11.920 μs, LowerFence = 920.071 μs, UpperFence = 967.752 μs
+ConfidenceInterval = [705.141 μs; 1,179.679 μs] (CI 99.9%), Margin = 237.269 μs (25.18% of Mean)
+Skewness = -0.36, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[915.652 μs ; 938.036 μs) | @
+[938.036 μs ; 963.163 μs) | @@
+---------------------------------------------------
+
+GetMostActiveVisistors.MergeJoin: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 2.307 ms, StdErr = 0.032 ms (1.37%), N = 3, StdDev = 0.055 ms
+Min = 2.245 ms, Q1 = 2.287 ms, Median = 2.329 ms, Q3 = 2.338 ms, Max = 2.348 ms
+IQR = 0.051 ms, LowerFence = 2.210 ms, UpperFence = 2.416 ms
+ConfidenceInterval = [1.307 ms; 3.307 ms] (CI 99.9%), Margin = 1.000 ms (43.33% of Mean)
+Skewness = -0.33, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[2.195 ms ; 2.288 ms) | @
+[2.288 ms ; 2.398 ms) | @@
+---------------------------------------------------
+
+GetMostActiveVisistors.NestedLoop1: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 9.554 ms, StdErr = 0.128 ms (1.34%), N = 3, StdDev = 0.223 ms
+Min = 9.347 ms, Q1 = 9.437 ms, Median = 9.527 ms, Q3 = 9.658 ms, Max = 9.789 ms
+IQR = 0.221 ms, LowerFence = 9.105 ms, UpperFence = 9.990 ms
+ConfidenceInterval = [5.494 ms; 13.614 ms] (CI 99.9%), Margin = 4.060 ms (42.49% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[9.234 ms ; 9.639 ms) | @@
+[9.639 ms ; 9.992 ms) | @
+---------------------------------------------------
+
+GetMostActiveVisistors.NestedLoop1_LinkedList: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = ; GC = 
+There are not any results runs
+
+GetMostActiveVisistors.NestedLoop2: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 76.210 ms, StdErr = 0.836 ms (1.10%), N = 3, StdDev = 1.448 ms
+Min = 75.284 ms, Q1 = 75.376 ms, Median = 75.468 ms, Q3 = 76.673 ms, Max = 77.879 ms
+IQR = 1.297 ms, LowerFence = 73.430 ms, UpperFence = 78.619 ms
+ConfidenceInterval = [49.794 ms; 102.627 ms] (CI 99.9%), Margin = 26.417 ms (34.66% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[75.264 ms ; 77.899 ms) | @@@
+---------------------------------------------------
+
+GetMostActiveVisistors.DataLoad: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+Runtime = .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 13.059 ms, StdErr = 0.142 ms (1.09%), N = 3, StdDev = 0.246 ms
+Min = 12.822 ms, Q1 = 12.932 ms, Median = 13.042 ms, Q3 = 13.178 ms, Max = 13.314 ms
+IQR = 0.246 ms, LowerFence = 12.563 ms, UpperFence = 13.547 ms
+ConfidenceInterval = [8.562 ms; 17.556 ms] (CI 99.9%), Margin = 4.497 ms (34.44% of Mean)
+Skewness = 0.07, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[12.707 ms ; 13.156 ms) | @@
+[13.156 ms ; 13.538 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.1, OS=ubuntu 20.04
+Intel Core i5-6500 CPU 3.20GHz (Skylake), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=3.1.403
+  [Host]     : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+  Job-GRZRQK : .NET Core 3.1.9 (CoreCLR 4.700.20.47201, CoreFX 4.700.20.47203), X64 RyuJIT
+
+IterationCount=3  LaunchCount=1  WarmupCount=1  
+
+|                 Method |        Mean |        Error |      StdDev |
+|----------------------- |------------:|-------------:|------------:|
+|             NestedLoop |    825.1 μs |     69.23 μs |     3.79 μs |
+|      NestedLoop_Linked |    942.4 μs |    237.27 μs |    13.01 μs |
+|              MergeJoin |  2,307.2 μs |    999.81 μs |    54.80 μs |
+|            NestedLoop1 |  9,554.1 μs |  4,059.82 μs |   222.53 μs |
+| NestedLoop1_LinkedList |          NA |           NA |          NA |
+|            NestedLoop2 | 76,210.1 μs | 26,416.59 μs | 1,447.98 μs |
+|               DataLoad | 13,059.1 μs |  4,497.04 μs |   246.50 μs |
+
+Benchmarks with issues:
+  GetMostActiveVisistors.NestedLoop1_LinkedList: Job-GRZRQK(IterationCount=3, LaunchCount=1, WarmupCount=1)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 μs   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:34 (34.7 sec), executed benchmarks: 7
+
+Global total time: 00:00:38 (38.61 sec), executed benchmarks: 7
+// * Artifacts cleanup *
